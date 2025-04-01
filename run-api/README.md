@@ -49,12 +49,10 @@ Table content
 ## application-local content
 
     DEPLOY_ENV: local
-    PRICE_RES_API_ADRRESS: localhost
-    PASSWORD_H2: password
-    USER_H2: sa
+    CALCULATOR_REST_API_ADRRESS: localhost
 
 ## Docker
 
 1. Build image
 
-* docker build -t price-rest-api:latest .
+* docker build -t calculator-rest-api:latest .
