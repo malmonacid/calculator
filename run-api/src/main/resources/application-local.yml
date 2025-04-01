@@ -1,0 +1,2 @@
+DEPLOY_ENV: local
+CALCULATOR_REST_API_ADRRESS: localhost

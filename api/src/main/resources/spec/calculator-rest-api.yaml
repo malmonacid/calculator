@@ -1,0 +1,66 @@
+openapi: 3.0.3
+info:
+  title: Calculator Service API
+  version: 1.0.0
+tags:
+  - name: calculator
+    description: Performing simple arithmetic operations
+paths:
+  /api/calculator:
+    post:
+      summary: Perform arithmetic operation
+      description: Perform a basic arithmetic operation (addition or subtraction) on two operands.
+      operationId: performOperation
+      requestBody:
+        description: The operands and operation to perform
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OperationRequestDTO'
+        required: true
+      responses:
+        '200':
+          description: The result of the operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OperationResponseDTO'
+        '400':
+          description: Bad request or unsupported operation
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Operation not supported"
+components:
+  schemas:
+    OperationRequestDTO:
+      type: object
+      properties:
+        operand1:
+          type: number
+          example: 5
+        operand2:
+          type: number
+          example: 3
+        operation:
+          type: string
+          enum:
+            - SUM
+            - SUBTRACTION
+      required:
+        - operand1
+        - operand2
+        - operation
+    OperationResponseDTO:
+      type: object
+      properties:
+        result:
+          type: number
+          example: 8
+        message:
+          type: string
+          example: "Operation successful"

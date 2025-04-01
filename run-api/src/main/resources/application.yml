@@ -1,0 +1,16 @@
+server:
+  address: { CALCULATOR_REST_API_ADRRESS }
+  shutdown: graceful
+  port: 8080
+
+spring:
+  profiles:
+    active: ${DEPLOY_ENV}
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: calculator-rest-api
+
+
+
+
