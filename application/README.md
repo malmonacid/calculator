@@ -1,6 +1,6 @@
 # calculator-rest-api
 
-Price Rest Api module application. Contains api definition and generate api
+Calculator Rest Api module application. Contains api definition and generate api
 
 ## Technologies
 

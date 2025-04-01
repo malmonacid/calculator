@@ -1,6 +1,6 @@
 # calculator
 
-API Rest that provides endpoint to consult products rates by dates
+API Rest that provides endpoint to sum and substract numbers
 
 Table content
 --------------
@@ -63,7 +63,7 @@ Table content
         <outputDir>${project.build.directory}</outputDir> 
         </configuration>
 
-1. openapi file declaration price-rest-api.yml in /resources/spec/ folder
+1. openapi file declaration calculator-rest-api.yml in /resources/spec/ folder
 1. if any changes use openapi code generator to regenerate model classes
 
 ## openapi-code-generator
@@ -81,7 +81,7 @@ Table content
                               </goals>
                               <configuration>
                                   <skipValidateSpec>true</skipValidateSpec>
-                                  <inputSpec>${project.basedir}/src/main/resources/spec/price-rest-api.yaml</inputSpec>
+                                  <inputSpec>${project.basedir}/src/main/resources/spec/calculator-rest-api.yaml</inputSpec>
                                   <generatorName>spring</generatorName>
                                   <configOptions>
                                       <openApiNullable>false</openApiNullable>
@@ -99,7 +99,7 @@ Table content
 ## application-local content
 
     DEPLOY_ENV: local
-    PRICE_RES_API_ADRRESS: localhost
+    CALCULATOR_REST_API_ADRRESS: localhost
 
 ## Docker
 
